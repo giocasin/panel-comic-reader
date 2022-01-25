@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FileUpload from "./components/file-upload.component";
+import FileUpload from "./components/file-upload/file-upload.component";
 
 function App() {
   const [newComicReader, setNewComicReader] = useState({
@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <FileUpload
-          accept=".cbr,.cbz"
+          accept=".cbr,.cbz,.cbt,.cb7,.cba"
           label="Comic(s)"
           multiple
           updateFilesCb={updateUploadedFiles}
