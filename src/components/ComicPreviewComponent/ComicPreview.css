@@ -1,0 +1,25 @@
+.comic-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comic-entry {
+    flex: 1 1 30%;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    max-width: 30%;
+    font-size: 0.7em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comic-entry-data-title {
+    flex: 1 1 20%;
+}
+
+.comic-entry-data-img {
+    flex: 1 1 80%;
+}

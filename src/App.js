@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { FileUpload } from './components/FileUploadComponent/FileUploadComponent';
+import ComicPreview from './components/ComicPreviewComponent/ComicPreviewComponent';
+import ComicPage from './components/ComicPageComponent/ComicPageComponent';
+import Loader from './components/LoaderComponent/LoaderComponent';
+import Logo from './img/icon.jpg';
 import './App.css';
 
-function App() {
+export default function App() {
+  const [comics, setComics] = useState([]);
+  const [currentOpenedComic, setCurrentOpenedComic] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const openComicPage = (comic) => {
+    setCurrentOpenedComic(comic);
+  }
+
+  const closeComic = () => {
+    setCurrentOpenedComic();
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={'main-interface'}>
+      <img src={Logo} alt='logo'/>
+      <br />
+      <FileUpload
+      setComics={setComics} 
+      setIsLoading={setIsLoading} />
+      {isLoading && <Loader />}
+      <ComicPreview
+      comics={comics}
+      openComicPage={openComicPage} />
+      {
+        currentOpenedComic &&
+        <ComicPage 
+        isManga={true}
+        comic={currentOpenedComic} 
+        closeComic={closeComic} />
+      }
     </div>
   );
 }
-
-export default App;

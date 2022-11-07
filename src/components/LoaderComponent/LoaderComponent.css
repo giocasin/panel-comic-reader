@@ -1,0 +1,15 @@
+.circleL {
+    border: 16px solid #FFFFFF;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: Spin 2s linear infinite;
+    box-shadow: 0 -5px 5px #708090;
+}
+    
+/*Animation code circle*/
+@keyframes Spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
