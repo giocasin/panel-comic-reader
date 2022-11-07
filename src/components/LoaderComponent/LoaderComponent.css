@@ -6,6 +6,7 @@
     height: 120px;
     animation: Spin 2s linear infinite;
     box-shadow: 0 -5px 5px #708090;
+    display: inline-block;
 }
     
 /*Animation code circle*/

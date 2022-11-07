@@ -12,7 +12,7 @@
     cursor: pointer;
     max-width: 30%;
     font-size: 0.7em;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
 }
 

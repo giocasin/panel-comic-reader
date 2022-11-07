@@ -12,7 +12,8 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   const openComicPage = (comic) => {
-    setCurrentOpenedComic(comic);
+    if(!isLoading)
+      setCurrentOpenedComic(comic);
   }
 
   const closeComic = () => {
@@ -24,8 +25,10 @@ export default function App() {
       <img src={Logo} alt='logo'/>
       <br />
       <FileUpload
+      isLoading={isLoading}
       setComics={setComics} 
       setIsLoading={setIsLoading} />
+      <br />
       {isLoading && <Loader />}
       <ComicPreview
       comics={comics}

@@ -1,18 +1,8 @@
 import { Comic } from "../entities/Comic";
 import JSZip from 'jszip';
 import { ComicPage } from "../entities/ComicPage";
+import { DetermineFileType } from "../utils/FileUtils";
 
-function determineFileType(filename) {
-    if (filename.slice(-4) === '.jpg' || filename.slice(-5) === '.jpeg') {
-        return 'jpeg'
-    }
-    else if (filename.slice(-4) === '.png') {
-        return 'png';
-    }
-    else {
-        return '';
-    }
-}
 
 export async function HandleFile(zipFile) {
     const zip = new JSZip();
@@ -24,7 +14,7 @@ export async function HandleFile(zipFile) {
         var content = await zip.loadAsync(zipFile);
         
         for (const file in content.files) {
-            if (determineFileType(file) !== '') {
+            if (DetermineFileType(file) !== '') {
                 files.push(file);
                 var blob = await zip.file(file).async("blob");           
                 const img = new Image();
