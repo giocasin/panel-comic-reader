@@ -1,0 +1,11 @@
+{
+  "appId": "io.ionic.panelcomicreader",
+  "appName": "panel-comic-reader",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {},
+  "server": {
+    "androidScheme": "https"
+  }
+}
