@@ -1,7 +1,7 @@
 {
   "name": "panel-comic-reader",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@capacitor/android": "5.2.2",
     "@capacitor/core": "^5.2.2",
