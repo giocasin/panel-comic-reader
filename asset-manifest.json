@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/panel-comic-reader/static/css/main.edb56c2b.css",
+    "main.js": "/panel-comic-reader/static/js/main.5f7e794d.js",
+    "static/media/icon.jpg": "/panel-comic-reader/static/media/icon.dbd7fad77cadbe3a642e.jpg",
+    "index.html": "/panel-comic-reader/index.html",
+    "main.edb56c2b.css.map": "/panel-comic-reader/static/css/main.edb56c2b.css.map",
+    "main.5f7e794d.js.map": "/panel-comic-reader/static/js/main.5f7e794d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edb56c2b.css",
+    "static/js/main.5f7e794d.js"
+  ]
+}
