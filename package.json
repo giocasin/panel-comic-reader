@@ -1,7 +1,7 @@
 {
   "name": "panel-comic-reader",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@capacitor/android": "5.2.2",
     "@capacitor/core": "^5.2.2",
@@ -13,7 +13,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "homepage": "https://giocasin.github.io/panel-comic-reader/"
+    "homepage": "https://giocasin.github.io/panel-comic-reader"
   },
   "scripts": {
     "start": "react-scripts start",
